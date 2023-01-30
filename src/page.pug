@@ -1,0 +1,245 @@
+extends ./pug/layout
+
+block content
+	<!-- START HEADER -->
+	.section.header
+		.container
+			.header__inner
+				a.header__logo(href="#home")
+					img.header__logo-img(src="images/logo.svg" alt="")
+				.header__nav.nav
+					a.nav__item.content-tab.content-tab--active(href="#about") О компании
+					a.nav__item.content-tab(href="#mission") Наша миссия
+					a.nav__item.content-tab(href="#credo") Наше кредо
+					a.nav__item.content-tab(href="#internship") Стажировка
+					a.nav__item.content-tab.vacancy-btn  Вакансии
+				+nav-btn
+	<!-- END HEADER -->
+
+	<!-- START CONTENT ABOUT -->
+	.content.content--active.content--opacity-1.content__about
+		<!-- START FIRST-SCREEN -->
+		.section.first-screen 
+			.container 
+				img.first-screen__title(src="images/first-screen/title.svg", alt="")
+			img.first-screen__img(src="images/first-screen/f-s-img.jpg", alt="")
+		<!-- END FIRST-SCREEN -->
+
+		<!-- START ABOUT -->
+		.section.about 
+			.container 
+				.heading О КОМПАНИИ
+				.about__text АО «Казахтелеком» — крупнейший инфокоммуникационный оператор Республики Казахстан, созданный в 1994 году на базе Министерства связи РК, представляющий широкий спектр услуг своим клиентам.
+				img.about__img(src="images/about/about-img.jpg", alt="") 
+		<!-- END ABOUT -->
+
+		<!-- START TELECOM-INKZ -->
+		.section.telecom-inkz 
+			.container
+				.telecom-inkz__inner 
+					img.telecom-inkz__img(src="images/telecom-inkz/inkz-img.jpg", alt="")
+					.telecom-inkz__content 
+						.telecom-inkz__heading.heading КАЗАХТЕЛЕКОМ В КАЗАХСТАНЕ
+						.telecom-inkz__text Все эти годы компания, модернизируя и развивая инфокоммуникационную инфраструктуру страны, вносила свой посильный вклад в становление Казахстана как полноценного участника международного телекоммуникационного сообщества. Сегодняшний уровень технического развития и стабильный рост капитализации подтверждают репутацию АО «Казахтелеком» как надежной, высокоэффективной и прогрессирующей компании.
+		<!-- END TELECOM-INKZ -->
+
+		<!-- START STRATEGY -->
+		.section.strategy 
+			.container 
+				.heading СТРАТЕГИЯ РАЗВИТИЯ
+				.strategy__text В 2016 году была обновлена  Долгосрочная стратегия развития группы компаний АО «Казахтелеком» до 2020 года, в которой определены области улучшения бизнеса и новые перспективные направления, выстроена целевая бизнес-модель группы компаний. Данная работа послужила основой для сохранения темпов развития компании и дочерних организаций в период значительных изменений на рынке инфокоммуникаций. Для мониторинга реализации Стратегии разработана и внедряется система ключевых показателей эффективности на всех уровнях организационной структуры группы компаний АО «Казахтелеком».
+		<!-- END STRATEGY -->
+
+		<!-- START GALLERY -->
+		.section.gallery.short-pb 
+			.gallery-heading.heading Галерея
+			.swiper-container.gallery-slider(data-arrow-prev=".tmpl-hh__gallery-slider-arrow-prev" data-arrow-next=".tmpl-hh__gallery-slider-arrow-next")
+				.swiper-wrapper
+					+slider-gallery-slide("/images/gallery/1.jpg")
+					+slider-gallery-slide("/images/gallery/2.jpg")
+					+slider-gallery-slide("/images/gallery/3.jpg")
+					+slider-gallery-slide("/images/gallery/4.jpg")
+					+slider-gallery-slide("/images/gallery/5.jpg")
+					+slider-gallery-slide("/images/gallery/6.jpg")
+				.slider-arrows.gallery-slider-arrows
+					.slider-arrow.slider-arrow--prev.gallery-slider-arrow-prev
+						+icon("left-arrow", "slider-arrow__icon")
+					.slider-arrow.slider-arrow--next.gallery-slider-arrow-next
+						+icon("right-arrow", "slider-arrow__icon")
+		<!-- END GALLERY -->
+
+		<!-- START VIDEO -->
+		.section.section--long-pt.s-video
+			.container 
+				.heading.heading--centered.heading--mb-short ТЕХНОЛОГИИ ВОЗМОЖНОСТЕЙ
+				.video__wrapper
+					+video("C5AIqMoLb40", "/images/video-img.jpg") 
+		<!-- END VIDEO -->
+	<!-- END CONTENT ABOUT -->
+
+	<!-- START CONTENT MISSION -->
+	.content.content__mission#mission
+		<!-- START MISSION -->
+		.section.mission
+			.container 
+				.mission__inner 
+					.mission__title Наша миссия
+					.mission__text Обеспечение ценности для акционеров при соблюдении социальных обязательств перед сотрудниками, окружающей средой и местным населением
+		<!-- END MISSION -->
+
+		<!-- START VISION -->
+		.section.vision 
+			.container 
+				.vision__inner 
+					.vision__content 
+						.heading Наше видение
+						.vision__content-text Все эти годы компания, модернизируя и развивая инфокоммуникационную инфраструктуру страны, вносила свой посильный вклад в становление Казахстана как полноценного участника международного телекоммуникационного сообщества. Сегодняшний уровень технического развития и стабильный рост капитализации подтверждают репутацию АО «Казахтелеком» как надежной, высокоэффективной и прогрессирующей компании.
+					img.vision__img(src="images/mission/vision.svg", alt="")
+		<!-- END VISION -->
+
+		<!-- START GOAL -->
+		.section.goal 
+			.container 
+				.goal__inner
+					.heading Наша цель
+					.goal__text Все эти годы компания, модернизируя и развивая инфокоммуникационную инфраструктуру страны, вносила свой посильный вклад в становление Казахстана как полноценного участника международного телекоммуникационного сообщества. Сегодняшний уровень технического развития и стабильный рост капитализации подтверждают репутацию АО «Казахтелеком» как надежной, высокоэффективной и прогрессирующей компании.
+		<!-- END GOAL -->
+	<!-- END CONTENT MISSION -->
+	
+	<!-- START CONTENT CREDO -->
+	.content.content__credo
+		<!-- START CREDO-SCREEN -->
+		.section.credo-screen 
+			.container 
+				.credo-screen__title Наши ценности
+		<!-- END CREDO-SCREEN -->
+
+		<!-- START QUOTE -->
+		.section.quote 	
+			.quote__img-wrapper 
+				img.quote__img(src="images/credo/quote.svg", alt="")
+			.container 
+				.quote__inner 
+					.quote__text Бизнес сводится, в конечном итоге, к трем понятиям: люди, продукты, прибыль. <br> На первом месте стоят люди. И если у вас нет надежной команды, то и остальные факторы вряд ли окажутся стоящими. <br>Ли Якокка
+		<!-- END QUOTE -->
+
+		<!-- START OUR-CREDO -->
+		.section.our-credo 
+			.container 
+				.our-credo__inner 
+					.heading.heading--centered Наше кредо
+					.our-credo__content-wrapper 
+						.our-credo__content-item 
+							.our-credo__content-card 
+								.our-credo__card-letter C 
+								.our-credo__card-title Client
+							.our-credo__content-descr
+								.our-credo__descr-title Клиент
+								.our-credo__descr-text Превосходить ожидания Клиента
+						.our-credo__content-item 
+							.our-credo__content-card 
+								.our-credo__card-letter R 
+								.our-credo__card-title Responsibility
+							.our-credo__content-descr
+								.our-credo__descr-title Ответственность за результат
+								.our-credo__descr-text Самостоятельность в принятии решений
+						.our-credo__content-item 
+							.our-credo__content-card 
+								.our-credo__card-letter E 
+								.our-credo__card-title Entrepreneurship
+							.our-credo__content-descr
+								.our-credo__descr-title Предпринимательский дух
+								.our-credo__descr-text Предпринимательская смелость лидера рынка
+						.our-credo__content-item 
+							.our-credo__content-card 
+								.our-credo__card-letter D 
+								.our-credo__card-title Digital culture
+							.our-credo__content-descr
+								.our-credo__descr-title Цифровая культура
+								.our-credo__descr-text Цифровые коммуникационные технологии в работе и в жизни
+						.our-credo__content-item 
+							.our-credo__content-card 
+								.our-credo__card-letter O 
+								.our-credo__card-title Outstanding decisions
+							.our-credo__content-descr
+								.our-credo__descr-title Выдающиеся решения
+								.our-credo__descr-text Качество решений для успеха бизнеса
+		<!-- END OUR-CREDO -->
+	<!-- END CONTENT CREDO -->
+
+	<!-- START CONTENT INTERNSHIP -->
+	.content.content__internship 
+		<!-- START INTERNSHIP -->
+			.section.internship-screen 
+				.container 
+					.internship-screen__title PROTELECOM — СТАНЬ ПРОФЕССИОНАЛОМ ВМЕСТЕ С АО «КАЗАХТЕЛЕКОМ»
+					a.internship-screen__btn(href="http://www.job.telecom.kz/" target="_blank") Подробнее
+		<!-- END INTERNSHIP -->
+		<!-- START INTERN -->
+		.section.intern
+			.container 
+				.intern__inner 
+					.intern__content 
+						.heading Стажировка 
+						.intern__content-text 
+							p В АО «Казахтелеком» продолжается масштабная программа стажировки PROtelecom для студентов 3, 4 курсов и магистратуры. 
+							p «Стань профессионалом с АО «Казахтелеком» — именно такой слоган выбран для программы. И это неслучайно — Ведущий телекоммуникационный оператор Казахстана открывает двери для всех талантливых студентов нашей страны для прохождения стажировки. 
+							p Программа ориентирована на учащихся 3,4 курсов и магистратуры ВУЗов во всех городах.
+					img.intern__img(src="images/internship/intern-img.jpg", alt="")
+		<!-- END INTERN -->
+
+		<!-- START CONDITIONS -->
+		.section.conditions 
+			.container 
+				img.conditions__img(src="images/internship/conditions.jpg", alt="")
+				.heading.heading--centered Как принять участие?
+				.conditions__text Заполните анкету (Анкета) и напишите Эссе на тему «Почему я хочу работать в АО «Казахтелеком» — это эссе, в котором вы рассказываете о конкретных мотивах для участия в программе стажировки «PROtelecom». Необходимо акцентировать внимание при составлении эссе на таких вопросах, как: каковы личные достижения  в школе или в высшем учебном заведении, в трудовой и общественной деятельности и какие цели собираетесь достичь  во время прохождения программы стажировки. Укажите регион, в котором желаете пройти стажировку. <br> <br>Отправьте анкету и эссе по электронной почте на адрес — internship@telecom.kz
+		<!-- END CONDITIONS -->
+
+		<!-- START SELECTION -->
+		.section.selection
+			.container 
+				.heading.heading--centered Этапы конкурсного отбора 
+				.selection__inner
+					.selection__img-wrapper 
+						img.selection__img(src="images/internship/selection.jpg", alt="")
+					.selection__item
+						.selection__item-text Сбор заявок и эссе
+						.selection__item-text Интервью
+						.selection__item-text Предложение о стажировке
+						.selection__item-text Welcome тренинг/ориентационный курс
+						.selection__item-text Вовлечение – проектная работа с наставником, развитие, построение индивидуальной образовательной траектории (длительность стажировки не менее 2-х месяцев)
+		<!-- END SELECTION -->
+		<!-- START ADVANTAGES -->
+		.section.advantages
+			.container 
+				.heading.heading--centered Стажировка в Kазахтелеком <br> для студентов это:
+				.advantages__inner 
+					.advantages__item 
+						.advantages__text Гибкий график
+						.advantages__text Возможность дальнейшего трудоустройства при наличии вакансий
+						.advantages__text Опыт работы в лидирующей компании на телеком рынке в Казахстане
+					.advantages__item 
+						.advantages__text Возможность найти рецензента для своей Дипломной работы
+						.advantages__text Возможность участвовать в реальных проектах в бизнес среде
+						.advantages__text Работа от 2 до 4 –х месяцев
+		<!-- END ADVANTAGES -->
+		<!-- START GOOD LUCK -->
+		.section.good-luck 
+			.container
+				.good-luck__img-wrapper  
+					img.good-luck__img(src="images/internship/good-luck.svg", alt="")
+				.good-luck__title Желаем удачи!
+		<!-- END GOOD LUCK -->
+	<!-- END CONTENT INTERNSHIP -->
+
+	<!-- START VACANCY -->
+	.section.vacancy 
+		.container 
+			.vacancy__inner
+				.vacancy__title ДОБРО ПОЖАЛОВАТЬ 
+				.vacancy__text В НАШУ КОМАНДУ
+				button.vacancy__btn Вакансии
+	<!-- END VACANCY -->
+	
+	

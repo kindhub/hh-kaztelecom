@@ -1,0 +1,303 @@
+@import "./../assets/vars";
+@import "./../assets/keyframes";
+@import "./../modules/nav.scss";
+
+// BREAKPOINT LAPTOP
+@media (max-width: $ss_laptop) {
+	.container{
+		max-width: 880px;
+	}
+	.wrapper{
+		font-size: 16px;
+	}
+
+	.nav__item {
+		font-size: 14px;
+	}
+	.nav__item + .nav__item{
+		margin-left: 25px;
+	} 
+
+	.heading{
+		font-size: 25px;
+	}
+
+	.goal{
+		min-height: 0;
+		background-image: none;
+		background: #F3F4F4;
+	}
+
+	.internship-screen{
+		&__title{
+			font-size: 25px;
+		}
+	}
+
+	.intern{
+		&__img{
+			height: 50%;
+			width: 50%;
+		}
+	}
+}
+
+// BREAKPOINT TABLET
+@media (max-width: $ss_tablet) {
+	.wrapper{
+		font-size: 15px;
+	}
+	.container{
+		padding: 0 15px;
+	}
+	@include nav-module($color_primary, #fff);
+	.nav {
+		display: flex;
+		flex-direction: column;
+		z-index: 3;
+		&__item {
+			color: #fff !important;
+			& + & {
+				margin-left: 0;
+			}
+			&--site{
+				display: none;
+			}
+			&--mob{
+				display: block;
+			}
+		}
+	}
+
+	.slider-arrows{
+		padding-top: 20px;
+	}
+
+	.heading{
+		text-align: center;
+	}
+	.telecom-inkz{
+		padding-top: 50px;
+		&__inner{
+			display: block;
+		}
+		&__img{
+			width: 100%;
+		}
+	
+		&__content{
+			width: 100%;
+			text-align: center;
+		}
+
+		&__heading{
+			width: 100%;
+			margin-top: 50px;
+		}
+	}
+
+	.strategy{
+		padding-top: 75px;
+		&__text{
+			text-align: center;
+		}
+	}
+
+	.vision{
+		padding-top: 50px;
+		&__img{
+			width: 35%;
+			height: 35%;
+		}
+	
+		&__content{
+			width: 60%;
+			text-align: center;
+		}
+	}
+
+	.goal{
+		margin-top: 75px;
+		&__inner{
+			padding: 50px 0;
+		}
+	}
+
+	.quote{
+		&__img{
+			width: 50%;
+			height: 50%;
+		}
+	}
+
+	.our-credo{
+		padding-top: 60px;
+		&__content-card{
+			padding: 15px 30px;
+			width: 280px;
+		}
+		&__card-letter{
+			font-size: 48px;
+		}
+		&__card-title{
+			font-size: 18px;
+			margin-left: 25px;
+		}
+		&__content-descr{
+			margin-left: 25px;
+			width: 40%;
+		}
+	}
+
+	.internship-screen{
+		text-align: center;
+		background-position: 30px 0;
+		&__title{
+			font-size: 28px;
+			width: 100%;
+		}
+	}
+
+	.intern{
+		padding-top: 50px;
+	}
+
+	.conditions{
+		padding-top: 50px;
+	}
+
+	.selection{
+		padding-top: 50px;
+	}
+
+	.advantages{
+		padding-top: 50px;
+	}
+
+	.good-luck{
+		padding-top: 50px;
+		&__img{
+			width: 70%;
+			height: 70%;
+		}
+	}
+
+	.vacancy{
+		&__text{
+			font-size: 25px;
+		}
+		&__btn{
+			padding: 13px 50px;
+		}
+	}
+}
+
+// BREAKPOINT SM TABLET
+@media (max-width: $ss_sm_tablet) {
+	.wrapper{
+		font-size: 14px;
+	}
+
+	.our-credo{
+		&__content-item + &__content-item{
+			margin-top: 15px;
+		}
+		&__content-card{
+			padding: 10px 20px;
+			width: 220px;
+		}
+		&__card-letter{
+			font-size: 38px;
+		}
+		&__card-title{
+			font-size: 14px;
+			margin-left: 15px;
+		}
+		&__content-descr{
+			margin-left: 25px;
+			width: 40%;
+		}
+	}
+	.intern{
+		&__inner{
+			display: block;
+			text-align: center;
+		}
+		&__content{
+			width: 100%;
+		}
+		&__img{
+			width: 70%;
+			margin-top: 20px;
+		}
+	}
+	.selection{
+		&__inner{
+			display: block;
+			align-content: center;
+		}
+		&__img-wrapper{
+			text-align: center;
+		}
+		&__img{
+			width: 60%;
+			margin-bottom: 20px;
+		}
+	
+		&__item{
+			margin-left: 20px;
+			width: 100%;
+		}
+	}
+}
+
+// BREAKPOINT PHONE
+@media (max-width: $ss_phone) {
+	.wrapper{
+		width: calc(100% + 30px);
+		margin: 0 -15px;
+	}
+	.vision{
+		&__inner{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	
+		&__content{
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+
+	.our-credo{
+		&__content-item{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+		}
+		&__content-card{
+			width: 60%;
+		}
+		&__content-descr{
+			width: 100%;
+		}
+	}
+
+	.advantages{
+		&__inner{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__item{
+			width: 80%;
+		}
+	
+		&__text{
+			position: relative;
+			padding: 0 40px ;
+		}
+	}	
+}
