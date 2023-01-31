@@ -15,18 +15,9 @@ import VacancyBtn from "./modules/VacancyBtn";
 	function initGallerySlider() {
 		swiper.init('.tmpl-hh__gallery-slider', {
 			loop: true,
-			effect: "coverflow",
 			slidesPerView: 3,
 			centeredSlides: true,
 			spaceBetween: 40,
-      		centeredSlides: true,
-      		coverflowEffect: {
-        		rotate: 50,
-        		stretch: 0,
-        		depth: 100,
-        		modifier: 1,
-        		slideShadows: true,
-      		},
 			navigation: {
 				prevEl: '.tmpl-hh__gallery-slider-arrow-prev',
 				nextEl: '.tmpl-hh__gallery-slider-arrow-next',

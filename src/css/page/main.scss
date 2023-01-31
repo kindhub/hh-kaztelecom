@@ -205,6 +205,24 @@
 	cursor: pointer;
 }
 
+.gallery-slider{
+	margin: 0 -40%;
+}
+.slider-gallery-slide__img{
+	transform: scale(0.9);
+	transition: all .4s;
+	border-radius: 10px;
+}
+
+.swiper-slide{ 
+	&-active{
+		.slider-gallery-slide__img{
+			transform: scale(1);
+		}
+	}
+}
+
+
 .video{
 	&__preview{
 		border-radius: 5px;
@@ -403,7 +421,7 @@
 		align-items: center;
 	}
 
-	&__img{
+	&__img-wrapper{
 		width: 48%;
 	}
 
