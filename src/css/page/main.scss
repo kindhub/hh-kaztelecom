@@ -122,12 +122,20 @@
 
 .nav__item {
 	color: $color_text !important;
-	transition: all .5s ease-in;
+	transition: all .3s ease-in;
 	padding-bottom: 3px;
 }
 
-.nav__item:hover{
-	border-bottom: 1px solid $color_text;
+.nav__item:after {
+	display:block;
+	content: '';
+	border-bottom: solid 1px $color_text;  
+	transform: scaleX(0);  
+	transition: transform .5s ease-in-out;
+  }
+
+.nav__item:hover:after { 
+	transform: scaleX(1); 
 }
 
 .nav__item + .nav__item{
